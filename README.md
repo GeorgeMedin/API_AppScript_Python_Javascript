@@ -35,10 +35,10 @@ Puedes consumir la API desde el siguiente endpoint público:
 
 # ¿Cómo surgió este proyecto? 🛠️
 
-Mientras trabajaba como Analista de Datos, me enfrenté al reto de calcular los días hábiles en Power BI, pero:
+Mientras trabajaba en uno de mis Dashboard, me enfrenté al reto de calcular los días hábiles en Power BI, pero:
 
-- No quería contar sábados, domingos, ni festivos.
-- Necesitaba que los datos se actualizaran dinámicamente.
+- No quería contar sábados, domingos, ni festivos en mi país Colômbia.
+- Necesitaba que los datos se actualizaran dinámicamente, ya que calculaba cuantos días habían pasado a ayer.
 - Quería evitar procesos manuales o conexiones complicadas.
 
 Primero lo resolví en Python usando la librería `holidays`, pero al intentar conectarlo a Power BI directamente... no fue tan sencillo.
@@ -59,7 +59,7 @@ Puedes conectar esta API en Power BI Desktop de manera muy sencilla:
    - `Dias_Habiles_Desde_Inicio_Mes_Hasta_Ayer`
    - `Dias_Habiles_Totales_Mes_Actual`
 
-¡Listo! Tendrás siempre los días hábiles actualizados en tus reportes.
+¡Listo! Tendrás siempre los días hábiles actualizados en tus reportes.Y si publicas tu informe en Power BI Service este se actualizará sin problema.
 
 ---
 
