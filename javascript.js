@@ -1,3 +1,5 @@
+//Usa este código de Javascript en tu portal de AppScript esto te ayuda a calcular los días hábiles del mes, y los días hábiles corridos al día de ayer (también se puede de hoy)
+
 function doGet(e) {
   const resultado = calcularDiasHabilesDelMes();
   return ContentService
@@ -25,12 +27,16 @@ function calcularDiasHabilesDelMes() {
     return diaSemana >= 1 && diaSemana <= 5; // Lunes a Viernes
   }
 
+//Aquí consulto una API debido a que AppScript no tiene librerías con Holidays, pero está API es de consumo gratis y me ayudó a llamar todos los días hábiles de Colombia 
+
   function esFestivoColombia(fecha) {
     const año = fecha.getFullYear();
     const mes = fecha.getMonth() + 1;
     const dia = fecha.getDate();
     const fechaFormateada = `${año}-${mes.toString().padStart(2, '0')}-${dia.toString().padStart(2, '0')}`;
     const url = `https://date.nager.at/api/v3/PublicHolidays/${año}/CO`;
+
+//https://date.nager.at/api/v3/PublicHolidays/${año}/--Aqui coloca el indicativo de tu país, en mi caso CO (Colômbia)
 
     try {
       const response = UrlFetchApp.fetch(url);
