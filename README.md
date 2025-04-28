@@ -15,6 +15,10 @@ Esta miniAPI calcula:
 
 y devuelve un **JSON limpio** y dinámico, como este:
 
+{
+"Dias_Habiles_Desde_Inicio_Mes_Hasta_Ayer": 17,
+  "Dias_Habiles_Totales_Mes_Actual": 20
+}
 
 
 # ¿Dónde está la API? 🌐
